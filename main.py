@@ -24,6 +24,44 @@ class methods():
                 input()
                 return main_menu()
             
+    def _menu_alumnos(opc_alumnos):
+        match opc_alumnos:
+            case 1:
+                return personal.alumnos()
+            case 2:
+                return personal.notas()
+            case 3:
+                return personal.reportes()
+            case 4:
+                main_menu()
+                return
+            case _:
+                system('clear') #Comando para limpiar el terminal en LINUX
+                #system('cls') Comando para limpiar el terminal en Windows
+                print('¡La opcion ingresada es invalida! Pulse enter para intentar nuevamente', end="")
+                input()
+                return personal.alumnos()
+            
+    def _menu_notas(opc_notas):
+        match opc_notas:
+            case 1:
+                return personal.alumnos()
+            case 2:
+                return personal.notas()
+            case 3:
+                return personal.reportes()
+            case 4:
+                system('clear') #Comando para limpiar el terminal en LINUX
+                #system('cls') Comando para limpiar el terminal en Windows
+                print('¡Gracias por usar nuestro programa!')
+                return
+            case _:
+                system('clear') #Comando para limpiar el terminal en LINUX
+                #system('cls') Comando para limpiar el terminal en Windows
+                print('¡La opcion ingresada es invalida! Pulse enter para intentar nuevamente', end="")
+                input()
+                return main_menu()
+            
 class personal():
     def alumnos():
         system('clear') #Comando para limpiar el terminal en LINUX
@@ -41,7 +79,7 @@ class personal():
         
 Ingrese una opcion y pulse enter para continuar: ''', end="")
         opc_alumnos = int(input())
-
+        methods._menu_alumnos(opc_alumnos)
     def notas():
         system('clear') #Comando para limpiar el terminal en LINUX
         #system('cls') Comando para limpiar el terminal en Windows
