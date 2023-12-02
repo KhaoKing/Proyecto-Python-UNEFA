@@ -1,0 +1,32 @@
+Desarrolle un programa en C++ que:
+	4.1 Desligue un menú donde se puedan visualizar las opciones:
+		- Alumnos.
+		- Notas.
+		- Reportes.
+		- Salir.
+		
+	4.2 Al seleccionar la Opcion Alumnos permita:
+		- Incluir los datos de un alumno (debe poder al menos registrar cinco (5) Alumnos).
+		  Entre los datos a incluir para los alumnos deben estar:
+			- Codigo Alumno
+			- Numero de Cedula
+			- Nombre y Apellido
+			- Codigo de las materias a cursar maximo dos (2) materias.
+					
+		(Debe estar en la capacidad de poder gestionar la eliminacion y modificaciones de los datos de los alumnos.)
+		
+	4.3 Al seleccionar la opcion de Notas debe permitir:
+	
+		- Incluir 4 Notas parciales para cada una de las materia que haya inscrito un alumno 
+		  y ser lo suficientemente inteligente para calcular la nota definitiva.
+		- Poder eliminar un nota.
+		- Poder modificar una nota.
+		- Recalcular la nota definita al realizar modificaciones en las notas.
+					
+	4.4 Al seleccionar la opcion la opcion Reportes.
+	
+		- Debe generar un listado por pantalla con los datos del alumnos y sus notas parciales
+		- Debe generar un listado por pantalla con los datos de los alumnos y verificar si el 
+		  alumnos esta aprobado reprobado o debe ir a recuperación.
+	
+	(La información de los alumnos y sus notas debe estar sustentado y estructuras mutivariables como vectores matrices y estructuras)
