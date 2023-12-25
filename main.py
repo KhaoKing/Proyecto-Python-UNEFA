@@ -1,5 +1,7 @@
 '''--- Librerias de Python ---'''
-from os import system #(Libreria de Python para Linux)
+from os import system
+
+import time #(Libreria de Python para Linux)
 
 '''--- Variable Global---'''
 nombre_archivo = "basedatos.txt"
@@ -168,7 +170,7 @@ class alumnos():
         #system('cls') Comando para limpiar el terminal en Windows
         try:
             print('''
-              Carga Estudiantil
+               Carga Estudiantil
             UNEFA - Nucleo Caracas
 
   Ingrese el numero de cedula del Estudiante: ''', end='')
@@ -177,56 +179,56 @@ class alumnos():
                 system('clear') #Comando para limpiar el terminal en LINUX
                 #system('cls') Comando para limpiar el terminal en Windows
                 print('La cédula no puede ser mayor a 9 digitos, por favor, ingrese un numero en el rango permitido.', end="")
-                input()
+                time.sleep(2)
                 return alumnos.cargar_alumnos()
         
             system('clear') #Comando para limpiar el terminal en LINUX
             #system('cls') Comando para limpiar el terminal en Windows
-            print('La cédula del estudiante a sido cargado con exito! Pulse enter para continuar', end="")
-            input()
+            print('La cédula del estudiante a sido cargado con exito!', end="")
+            time.sleep(2)
             system('clear') #Comando para limpiar el terminal en LINUX
                 #system('cls') Comando para limpiar el terminal en Windows
             print('''
-              Carga Estudiantil
+               Carga Estudiantil
             UNEFA - Nucleo Caracas
 
-        Ingrese el nombre del Estudiante: ''', end='')
-            name = input()
+     Ingrese el nombre del Estudiante: ''', end='')
+            name = str(input())
             if name:
                 system('clear') #Comando para limpiar el terminal en LINUX
                 #system('cls') Comando para limpiar el terminal en Windows
-                print('¡El nombre del estudiante a sido cargado con exito! Pulse enter para continuar', end="")
-                input()
+                print('¡El nombre del estudiante a sido cargado con exito!', end="")
+                time.sleep(2)
             system('clear') #Comando para limpiar el terminal en LINUX
             #system('cls') Comando para limpiar el terminal en Windows
             print('''
-              Carga Estudiantil
+               Carga Estudiantil
             UNEFA - Nucleo Caracas
 
-      Ingrese el apellido del Estudiante: ''', end='')
-            last_name = input()
+    Ingrese el apellido del Estudiante: ''', end='')
+            last_name = str(input())
             if last_name:
                 system('clear') #Comando para limpiar el terminal en LINUX
                 #system('cls') Comando para limpiar el terminal en Windows
-                print('¡El apellido del estudiante a sido cargado con exito! Pulse enter para continuar', end="")
-                input()
+                print('¡El apellido del estudiante a sido cargado con exito!', end="")
+                time.sleep(2)
             system('clear') #Comando para limpiar el terminal en LINUX
             #system('cls') Comando para limpiar el terminal en Windows
             print('''
-              Carga Estudiantil
+               Carga Estudiantil
             UNEFA - Nucleo Caracas
 
 Ingrese la materia que el estudiante va a cursar: ''', end='')
-            matery = input()
+            matery = str(input())
             if matery:
                 system('clear') #Comando para limpiar el terminal en LINUX
                 #system('cls') Comando para limpiar el terminal en Windows
-                print('¡La materia a sido cargada con exito! Pulse enter para continuar', end="")
-                input()
+                print('¡La materia a sido cargada con exito!', end="")
+                time.sleep(2)
             system('clear') #Comando para limpiar el terminal en LINUX
                 #system('cls') Comando para limpiar el terminal en Windows
             opc_charge = input('¿Desea ingresar otro estudiante? (S/N) ')
-            if opc_charge == 'S':
+            if opc_charge.upper() == 'S':
                 vals_alumno.append([identification_card, name, last_name, matery])
                 rwu_files.write_alumno(nombre_archivo, vals_alumno)
                 alumnos.cargar_alumnos()
@@ -239,7 +241,7 @@ Ingrese la materia que el estudiante va a cursar: ''', end='')
             system('clear') #Comando para limpiar el terminal en LINUX
             #system('cls') Comando para limpiar el terminal en Windows
             print('Ha ingresado un valor incorrecto, por favor, intente nuevamente', end="")
-            input()
+            time.sleep(2)
             return alumnos.cargar_alumnos()
 
 '''--- Comienzo del programa ---'''
